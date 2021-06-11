@@ -13,6 +13,8 @@ struct Feed: Decodable {
     let createdBefore: String
     let author: Author
     let video: Video
+    let athlete: Athlete
+    let description: String
 }
 
 struct Author: Decodable {
@@ -25,4 +27,17 @@ struct Video: Decodable {
     let url: String
     let poster: String
     let length: Int
+}
+
+struct Athlete: Decodable {
+    let name: String
+    let avatar: String
+    let club: String
+    let country: Country
+    let isCelebrity: Bool
+}
+
+struct Country: Decodable {
+    let name: String
+    let icon: String
 }

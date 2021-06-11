@@ -1,26 +1,22 @@
 //
-//  FeedTableViewController.swift
+//  FeedViewController.swift
 //  JSON Video Feed
 //
 //  Created by Emin Emini on 11.6.21.
 //
 
 import UIKit
-import AVKit
-import AVFoundation
 
 class FeedViewController: UIViewController {
 
+    //MARK: - Outlets
     @IBOutlet weak var feedTableView: UITableView!
     
     //MARK: - Properties
     //API Controller
     var apiController = APIController()
-    
-    var playerViewController = AVPlayerViewController()
-    var playerView = AVPlayer()
-    
-    
+   
+    //MARK: - View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -33,38 +29,17 @@ class FeedViewController: UIViewController {
 
 }
 
-//Play Video
-extension FeedViewController {
-    func playVideo(url: String) {
-        let myUrl: URL = URL(string: url)!
-        
-        playerView = AVPlayer(url: myUrl as URL)
-        playerViewController.player = playerView
-        
-        self.present(playerViewController, animated: true) {
-            self.playerViewController.player?.play()
-        }
-        
-    }
-}
-
 //MARK: - Fetch Data From API
 extension FeedViewController {
-    //This function is used through `FriendsViewController` to fetch users from the API.
     func fetchDataFromAPI() {
-        //activityIndicator.hidesWhenStopped = true
-        //activityIndicator.startAnimating()
         apiController.getFeed(completion: { result in
             switch result {
             case .success( _):
                 DispatchQueue.main.async {
-                    //print(listSize)
                     self.feedTableView.reloadData()
-                    //self.activityIndicator.stopAnimating()
                 }
             case .failure(let error):
                 print("Error: \(error)")
-                //self.activityIndicator.stopAnimating()
             }
         })
     }
@@ -95,7 +70,12 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
         let feedPost = apiController.feedList[indexPath.row]
-        playVideo(url: feedPost.video.url)
+        let postVC: PostViewController =
+            self.storyboard!.instantiateViewController(withIdentifier: "PostViewController") as! PostViewController
+        postVC.post = feedPost
+        
+        self.present(postVC, animated: true, completion: nil)
     }
 }

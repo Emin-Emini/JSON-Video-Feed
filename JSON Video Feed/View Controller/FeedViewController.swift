@@ -10,7 +10,7 @@ import UIKit
 class FeedViewController: UIViewController {
 
     //MARK: - Outlets
-    @IBOutlet weak var feedTableView: UITableView!
+    @IBOutlet private weak var feedTableView: UITableView!
     
     //MARK: - Properties
     //API Controller
@@ -20,8 +20,6 @@ class FeedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        feedTableView.delegate = self
-        feedTableView.dataSource = self
         
         fetchDataFromAPI()
     }
@@ -31,7 +29,7 @@ class FeedViewController: UIViewController {
 
 //MARK: - Fetch Data From API
 extension FeedViewController {
-    func fetchDataFromAPI() {
+    private func fetchDataFromAPI() {
         apiController.getFeed(completion: { result in
             switch result {
             case .success( _):

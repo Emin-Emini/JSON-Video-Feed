@@ -12,15 +12,15 @@ import AVFoundation
 class PostViewController: UIViewController {
     
     //MARK: - Outlets
-    @IBOutlet weak var postImage: UIImageView!
+    @IBOutlet private weak var postImage: UIImageView!
+     
+    @IBOutlet private weak var athleteImage: UIImageView!
+    @IBOutlet private weak var athleteName: UILabel!
+    @IBOutlet private weak var isVerified: UIImageView!
+    @IBOutlet private weak var athleteClub: UILabel!
+    @IBOutlet private weak var athleteCountry: UIImageView!
     
-    @IBOutlet weak var athleteImage: UIImageView!
-    @IBOutlet weak var athleteName: UILabel!
-    @IBOutlet weak var isVerified: UIImageView!
-    @IBOutlet weak var athleteClub: UILabel!
-    @IBOutlet weak var athleteCountry: UIImageView!
-    
-    @IBOutlet weak var postDescription: UILabel!
+    @IBOutlet private weak var postDescription: UILabel!
     
     //MARK: - Properties
     var post: Feed!
@@ -53,7 +53,7 @@ class PostViewController: UIViewController {
 
 //MARK: Functions
 extension PostViewController {
-    func loadData() {
+    private func loadData() {
         postDescription.text = post.description
         
         athleteName.text = post.athlete.name

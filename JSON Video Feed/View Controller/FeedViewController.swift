@@ -10,7 +10,7 @@ import UIKit
 class FeedViewController: UIViewController {
 
     //MARK: - Outlets
-    @IBOutlet private weak var feedTableView: UITableView!
+    @IBOutlet weak var feedTableView: UITableView!
     
     //MARK: - Properties
     //API Controller

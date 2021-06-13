@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23025C232676286B004CB238 /* JSON_Video_Feed_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23025C222676286B004CB238 /* JSON_Video_Feed_Tests.swift */; };
 		23223C992673E0F50075E4A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23223C982673E0F50075E4A6 /* AppDelegate.swift */; };
 		23223C9B2673E0F50075E4A6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23223C9A2673E0F50075E4A6 /* SceneDelegate.swift */; };
 		23223CA02673E0F50075E4A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23223C9E2673E0F50075E4A6 /* Main.storyboard */; };
@@ -19,7 +20,20 @@
 		23223CBB2674057F0075E4A6 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23223CBA2674057F0075E4A6 /* PostViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		23025C252676286B004CB238 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 23223C8D2673E0F50075E4A6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 23223C942673E0F50075E4A6;
+			remoteInfo = "JSON Video Feed";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		23025C202676286B004CB238 /* JSON Video Feed_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "JSON Video Feed_Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		23025C222676286B004CB238 /* JSON_Video_Feed_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSON_Video_Feed_Tests.swift; sourceTree = "<group>"; };
+		23025C242676286B004CB238 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23223C952673E0F50075E4A6 /* JSON Video Feed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JSON Video Feed.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		23223C982673E0F50075E4A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23223C9A2673E0F50075E4A6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,6 +49,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		23025C1D2676286B004CB238 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		23223C922673E0F50075E4A6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -45,10 +66,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		23025C212676286B004CB238 /* JSON Video Feed_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				23025C222676286B004CB238 /* JSON_Video_Feed_Tests.swift */,
+				23025C242676286B004CB238 /* Info.plist */,
+			);
+			path = "JSON Video Feed_Tests";
+			sourceTree = "<group>";
+		};
 		23223C8C2673E0F50075E4A6 = {
 			isa = PBXGroup;
 			children = (
 				23223C972673E0F50075E4A6 /* JSON Video Feed */,
+				23025C212676286B004CB238 /* JSON Video Feed_Tests */,
 				23223C962673E0F50075E4A6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -57,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				23223C952673E0F50075E4A6 /* JSON Video Feed.app */,
+				23025C202676286B004CB238 /* JSON Video Feed_Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -114,6 +146,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		23025C1F2676286B004CB238 /* JSON Video Feed_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23025C272676286B004CB238 /* Build configuration list for PBXNativeTarget "JSON Video Feed_Tests" */;
+			buildPhases = (
+				23025C1C2676286B004CB238 /* Sources */,
+				23025C1D2676286B004CB238 /* Frameworks */,
+				23025C1E2676286B004CB238 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				23025C262676286B004CB238 /* PBXTargetDependency */,
+			);
+			name = "JSON Video Feed_Tests";
+			productName = "JSON Video Feed_Tests";
+			productReference = 23025C202676286B004CB238 /* JSON Video Feed_Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		23223C942673E0F50075E4A6 /* JSON Video Feed */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 23223CA92673E0F60075E4A6 /* Build configuration list for PBXNativeTarget "JSON Video Feed" */;
@@ -140,6 +190,10 @@
 				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
+					23025C1F2676286B004CB238 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 23223C942673E0F50075E4A6;
+					};
 					23223C942673E0F50075E4A6 = {
 						CreatedOnToolsVersion = 12.5;
 					};
@@ -159,11 +213,19 @@
 			projectRoot = "";
 			targets = (
 				23223C942673E0F50075E4A6 /* JSON Video Feed */,
+				23025C1F2676286B004CB238 /* JSON Video Feed_Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		23025C1E2676286B004CB238 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		23223C932673E0F50075E4A6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -177,6 +239,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		23025C1C2676286B004CB238 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23025C232676286B004CB238 /* JSON_Video_Feed_Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		23223C912673E0F50075E4A6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -192,6 +262,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		23025C262676286B004CB238 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 23223C942673E0F50075E4A6 /* JSON Video Feed */;
+			targetProxy = 23025C252676286B004CB238 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		23223C9E2673E0F50075E4A6 /* Main.storyboard */ = {
@@ -213,6 +291,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		23025C282676286B004CB238 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 392NZUSY8M;
+				INFOPLIST_FILE = "JSON Video Feed_Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "EminEmini.JSON-Video-Feed-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JSON Video Feed.app/JSON Video Feed";
+			};
+			name = Debug;
+		};
+		23025C292676286B004CB238 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 392NZUSY8M;
+				INFOPLIST_FILE = "JSON Video Feed_Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "EminEmini.JSON-Video-Feed-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JSON Video Feed.app/JSON Video Feed";
+			};
+			name = Release;
+		};
 		23223CA72673E0F60075E4A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -370,6 +488,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		23025C272676286B004CB238 /* Build configuration list for PBXNativeTarget "JSON Video Feed_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23025C282676286B004CB238 /* Debug */,
+				23025C292676286B004CB238 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		23223C902673E0F50075E4A6 /* Build configuration list for PBXProject "JSON Video Feed" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

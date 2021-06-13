@@ -7,6 +7,8 @@
 
 [Architecture](#architecture)
 
+[Testing](#testing)
+
 [Conclusion](#conclusion)
 
 ## Description
@@ -117,6 +119,9 @@ The architecture of the software is really important. Once you define requiremen
 
 Most common architectures for iOS are `MVC` and `MVVM`.<br>
 For this simple task, MVC is enough.<br>
+
+## Testing
+As I could understand the requirements, the main purpose was parsing `JSON API`, and `Unit Testing` was optional. So, I created some Unit Testing with a small coverage just to demonstrate my familiarity with writing Test Cases.
 
 ## Conclusion
 At the end, I would like to present it visually how user will comunicate with the app and other services. To mention, I presented it on a `Deployment Diagram`.
